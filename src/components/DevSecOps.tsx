@@ -6,7 +6,10 @@ const DevSecOps = () => {
       <h3 className="mt-11 mb-5 text-3xl">
         <strong>Introducing DevSecOps: Why Do We Need It?</strong>
       </h3>
-      <img src="devops_vs_devsecops.jpg" alt="DevOps vs DevSecOps" />
+      <figure>
+        <img src="devops_vs_devsecops.jpg" alt="DevOps vs DevSecOps" />
+        <figcaption className="text-center">DevOps vs DevSecOps</figcaption>
+      </figure>
       <h3 className="mt-8 mb-3 text-2xl">
         <strong>What is DevSecOps?</strong>
       </h3>
@@ -29,7 +32,10 @@ const DevSecOps = () => {
       <h3 className="mt-8 mb-5 text-2xl">
         <strong>How to Integrate Security into the DevOps Cycle</strong>
       </h3>
-      <img src="dso-pipeline.png" alt="DevSecOps Pipeline" />
+      <figure>
+        <img src="devsecops-diagram.png" alt="DevSecOps Pipeline" />
+        <figcaption className="text-center mb-3">DevSecOps Pipeline</figcaption>
+      </figure>
 
       <p className="text-lg">
         The DevOps pipeline consists of several stages that help manage the
@@ -39,36 +45,184 @@ const DevSecOps = () => {
         className="text-base"
         style={{ listStyleType: "disc", paddingLeft: "30px" }}
       >
-        <li className="text-lg">
-          Plan: Define project goals, requirements, and strategies.
+        <li className="text-lg m-2">
+          <strong>Plan:</strong> The plan phase in DevSecOps involves
+          collaboration, discussion, review, and security analysis strategy.
+          Teams should conduct a security analysis and create a plan for
+          testing. Popular planning tools include{" "}
+          <a
+            className="text-blue-500"
+            href="https://iriusrisk.com/threat-modeling-tool/"
+          >
+            IriusRisk
+          </a>
+          ,{" "}
+          <a
+            className="text-blue-500"
+            href="https://www.atlassian.com/software/jira"
+          >
+            Jira
+          </a>
+          , and{" "}
+          <a
+            className="text-blue-500"
+            href="https://www.atlassian.com/partnerships/slack"
+          >
+            Slack
+          </a>
+          , along with issue tracking and management tools.
+        </li>
+
+        <li className="text-lg mb-2">
+          <strong>Build:</strong> DevSecOps build tools automate security
+          analysis against build output artifacts, including software component
+          analysis, static application software testing (SAST), and unit tests.
+          These tools can be integrated into a CI/CD pipeline to automate these
+          tests. During the build phase, developers should review and scan
+          third-party code dependencies for potential vulnerabilities. Tools
+          like{" "}
+          <a
+            className="text-blue-500"
+            href="https://owasp.org/www-project-dependency-check/"
+          >
+            OWASP Dependency-Check
+          </a>
+          ,{" "}
+          <a className="text-blue-500" href="https://www.sonarqube.org/">
+            SonarQube
+          </a>
+          ,{" "}
+          <a className="text-blue-500" href="https://app.sourceclear.io/login">
+            SourceClear
+          </a>
+          ,{" "}
+          <a
+            className="text-blue-500 "
+            href="http://retirejs.github.io/retire.js/"
+          >
+            Retire.js
+          </a>
+          ,{" "}
+          <a className="text-blue-500" href="https://www.checkmarx.com/">
+            Checkmarx
+          </a>
+          , and{" "}
+          <a className="text-blue-500" href="https://snyk.io/">
+            Snyk
+          </a>{" "}
+          execute build phase analysis. In the code phase, tools like static
+          code analysis, code reviews, and pre-commit hooks help developers
+          write more secure code. These tools support various programming
+          languages and integrated development environments.
         </li>
         <li className="text-lg">
-          Code: Write and review code, implementing the planned features.
+          <strong>Test:</strong> The test phase, initiated after a build
+          artifact is deployed, uses dynamic application security testing (DAST)
+          tools to detect live application flows like user authentication,
+          authorization, SQL injection, and API-related endpoints. Various open
+          source and paid tools, including{" "}
+          <a
+            className="text-blue-500"
+            href="https://dev.to/raghwendrasonu/security-testing-bdd-security-2oj8"
+          >
+            BDD Automated Security Tests
+          </a>
+          ,{" "}
+          <a
+            className="text-blue-500"
+            href="https://owasp.org/index.php/JBroFuzz"
+          >
+            JBroFuzz
+          </a>
+          ,{" "}
+          <a
+            className="text-blue-500"
+            href="https://boofuzz.readthedocs.io/en/stable/"
+          >
+            Boofuzz
+          </a>
+          ,{" "}
+          <a
+            className="text-blue-500"
+            href="https://owasp.org/www-project-zap/"
+          >
+            OWASP ZAP
+          </a>
+          ,{" "}
+          <a className="text-blue-500" href="https://www.arachni-scanner.com/">
+            Arachi
+          </a>
+          ,{" "}
+          <a
+            className="text-blue-500"
+            href="https://www.ibm.com/supply-chain/hcl-divestiture"
+          >
+            IBM AppScan
+          </a>
+          ,{" "}
+          <a className="text-blue-500" href="http://gauntlt.org/">
+            GAUNTLT
+          </a>
+          , and{" "}
+          <a className="text-blue-500" href="https://secapps.com/suite">
+            SecApp suite
+          </a>{" "}
+          are available.
+        </li>
+
+        <li className="text-lg">
+          <strong>Deploy:</strong> During the deploy phase, security concerns
+          are addressed against the live production system, including
+          configuration differences and validation of production TLS and DRM
+          certificates. Runtime verification tools and chaos engineering
+          principles are used to test the system's performance. The release
+          phase focuses on securing the runtime environment, ensuring minimal
+          access, and using configuration management tools for security. Best
+          practices are provided by the security community.
         </li>
         <li className="text-lg">
-          Build: Compile the code into a functional application.
-        </li>
-        <li className="text-lg">
-          Test: Validate the application through various testing methods.
-        </li>
-        <li className="text-lg">
-          Release: Prepare the application for deployment.
-        </li>
-        <li className="text-lg">
-          Deploy: Deliver the application to the intended environment.
-        </li>
-        <li className="text-lg">
-          Operate: Maintain and manage the application post-deployment.
-        </li>
-        <li className="text-lg">
-          Monitor: Track the application’s performance and detect issues.
+          <strong>Observe:</strong> Upon deployment in a live production
+          environment, companies need to monitor the application for potential
+          attacks or leaks using automated security checks and monitoring loops.
+          Runtime application self-protection (RASP) automatically identifies
+          and blocks inbound security threats, while penetration testing and bug
+          bounty programs can be used to identify exploits or vulnerabilities.
+          Security monitoring tools like{" "}
+          <a
+            className="text-blue-500"
+            href="https://www.imperva.com/products/runtime-application-self-protection-rasp/"
+          >
+            Imperva RASP
+          </a>
+          ,{" "}
+          <a className="text-blue-500" href="https://www.alertlogic.com/">
+            Alert Logic
+          </a>
+          , and{" "}
+          <a
+            className="text-blue-500"
+            href="https://www.cloudpassage.com/cloud-computing-security/"
+          >
+            Halo
+          </a>{" "}
+          are popular.
         </li>
       </ul>
       <h3 className="mt-8 mb-5 text-2xl">
         <strong>The Shift-Left Approach</strong>
       </h3>
-      <img src="shiftleft0.png" alt="" />
-      <img src="shiftleft1.png" alt="" />
+      <figure>
+        <img src="shiftleft0.png" alt="Without Shift-Left" />
+        <figcaption className="text-center mb-4 text-slate-700">
+          Without Shift-Left
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="shiftleft1.png" alt="With Shift-Left" />
+        <figcaption className="text-center mb-4 text-slate-700">
+          With Shift-Left
+        </figcaption>
+      </figure>
       <p className="mt-4 text-lg">
         One of DevSecOps’ most significant innovations is the “shift-left”
         approach. Picture a typical development timeline—ideas are fleshed out,
@@ -137,32 +291,34 @@ const DevSecOps = () => {
           {" "}
           {/* Tailwind classes for numbering and padding */}
           <li className="m-1">
-            Limited Security Assurance: At both business and project levels,
-            there’s often a lack of confidence in the security measures being
-            implemented.
+            <strong>Limited Security Assurance:</strong> At both business and
+            project levels, there’s often a lack of confidence in the security
+            measures being implemented.
           </li>
           <li className="m-1">
-            Organisational Barriers: Issues with collaboration, tooling, and a
-            lack of unified culture can slow down progress.
+            <strong>Organisational Barriers:</strong> Issues with collaboration,
+            tooling, and a lack of unified culture can slow down progress.
           </li>
           <li className="m-1">
-            Quality Concerns: As systems get more complex, security is sometimes
-            deprioritized, which can impact overall quality.
+            <strong>Quality Concerns:</strong> As systems get more complex,
+            security is sometimes deprioritized, which can impact overall
+            quality.
           </li>
           <li className="m-1">
-            Skill Gaps: Developers, business stakeholders, and auditors may lack
-            the security skills needed to fully adopt DevSecOps practices.
+            <strong>Skill Gaps:</strong> Developers, business stakeholders, and
+            auditors may lack the security skills needed to fully adopt
+            DevSecOps practices.
           </li>
           <li className="m-1">
-            Insufficient Security Guidance: Limited resources, standards, and
-            data can make it challenging to provide clear security guidance
-            throughout projects.
+            <strong>Insufficient Security Guidance:</strong> Limited resources,
+            standards, and data can make it challenging to provide clear
+            security guidance throughout projects.
           </li>
         </ol>
       </div>
       <div>
         <h3 className="mt-7 mb-3 text-2xl">
-          <strong>DevSecOps Challenges</strong>
+          <strong>Future of DevSecOps</strong>
         </h3>
         <p className="text-lg">
           DevSecOps isn’t just a trend—it’s quickly becoming a necessity as the

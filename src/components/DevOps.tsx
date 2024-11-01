@@ -12,7 +12,10 @@ const DevOps = () => {
         development and optimization goes faster compared with the traditional
         model of software development.
       </p>
-      <img src="Devops1.jpeg" alt="" />
+      <figure>
+        <img src="Devops1.jpeg" alt="" />
+        <figcaption className="text-center">DevOps LifeCycle</figcaption>
+      </figure>
       <h4 className="text-left mt-5 text-2xl ">
         Now lets see the benefits of DevOps:
       </h4>
