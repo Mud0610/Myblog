@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-blue-500 p-4 flex justify-between items-center">
       <Link to="/">
-        <h1 className="text-white text-2xl">MyBlog</h1>
+        <h1 className="text-white text-2xl">Mudasser's Blog</h1>
       </Link>
 
       <ul className="flex space-x-4">
