@@ -38,7 +38,7 @@ const DevSecOps = () => {
       </figure>
 
       <p className="text-lg">
-        The DevOps pipeline consists of several stages that help manage the
+        The DevSecOps pipeline consists of several stages that help manage the
         software lifecycle efficiently, which include:
       </p>
       <ul
